@@ -118,6 +118,27 @@ html{scroll-padding-top:66px}
 <section class="section dark"><div class="inner"><div class="orn">✧ ❦ ✧</div><div class="blessing">“The best thing to hold onto in life is each other.”</div><h2>Your Blessings Are Our Gift</h2><p class="lead">Your presence, smiles and good wishes are the most precious gifts. We cannot wait to celebrate with you.</p><button class="btn" onclick="shareInvite()">Share Invitation ↗</button><button class="btn" onclick="saveCalendar()">Save all events to calendar ↓</button></div></section></main>
 <footer class="footer"><div class="orn">✧ ❦ ✧</div><div class="script">With love,</div><div class="script" style="font-size:62px">A & B</div><small>23 — 24 NOVEMBER 2026 · DURG, CHHATTISGARH</small><div class="orn">❧</div><small>MADE WITH LOVE · SEE YOU AT THE CELEBRATION</small></footer>
 <script>
+// Wedding countdown: 24 November 2026, 3:30 PM India time
+(function(){
+  const target = new Date('2026-11-24T15:30:00+05:30').getTime();
+  function updateWeddingCountdown(){
+    const now = Date.now();
+    let diff = Math.max(0, target - now);
+    const days = Math.floor(diff / 86400000); diff %= 86400000;
+    const hours = Math.floor(diff / 3600000); diff %= 3600000;
+    const minutes = Math.floor(diff / 60000); diff %= 60000;
+    const seconds = Math.floor(diff / 1000);
+    const values = {days, hours, minutes, seconds};
+    for (const [id, value] of Object.entries(values)) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(value).padStart(2, '0');
+    }
+  }
+  updateWeddingCountdown();
+  setInterval(updateWeddingCountdown, 1000);
+})();
+</script>
+<script>
 let ctx=null,on=false,timer=null,step=0,beat=0;
 const notes=[523.25,587.33,659.25,783.99,880,783.99,659.25,587.33,523.25,659.25,783.99,880,1046.5,880,783.99,659.25,587.33,659.25,783.99,659.25];
 function voice(freq,dur,vol,type='sine',detune=0){

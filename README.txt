@@ -1,5 +1,1 @@
-A & B Royal Wedding Website
-
-Open index.html in Chrome or upload index.html as the site root to GitHub Pages/Netlify. All photo assets are embedded in this single HTML file. Internet is only needed for Google Fonts.
-
-Wedding functions: 23-24 November 2026. Venue: Hari Amrit, Durg, Chhattisgarh.
+A & B Royal Wedding website. Upload index.html to your GitHub repository root and commit changes. Countdown target: 24 November 2026, 3:30 PM IST.
